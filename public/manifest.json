@@ -1,0 +1,39 @@
+{
+    "name": "Glados自动签到插件",
+    "version": "1.0",
+    "description": "支持浏览器启动时自动签到,查看用户当前点数与剩余天数,若签到失败请重新登录一次",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+
+    ],
+    "permissions": ["storage","declarativeContent","cookies","notifications"],
+    "host_permissions":["<all_urls>"],
+    "web_accessible_resources": [
+        {
+            "resources": [ "/images/app.png" ],
+            "matches": ["<all_urls>"]
+        }
+    ],
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'"
+    },
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": {
+            "16": "/images/app.png",
+            "32": "/images/app.png",
+            "48": "/images/app.png",
+            "128": "/images/app.png"
+        },
+        "default_title": "Glados-Daily-Checkin"
+    },
+    "icons": {
+        "16": "/images/app.png",
+        "32": "/images/app.png",
+        "48": "/images/app.png",
+        "128": "/images/app.png"
+    }
+}

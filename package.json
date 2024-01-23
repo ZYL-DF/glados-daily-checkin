@@ -1,0 +1,26 @@
+{
+  "name": "glados-daily-checkin",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite -c vite.popup.config.ts",
+    "build": "vite build -c vite.popup.config.ts && vite build -c vite.content.config.ts && vite build -c vite.background.config.ts && node build.js",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@ant-design/icons-vue": "^7.0.1",
+    "ant-design-vue": "^4.1.1",
+    "fs": "^0.0.1-security",
+    "vue": "^3.3.11"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.258",
+    "@types/node": "^20.11.5",
+    "@vitejs/plugin-vue": "^4.5.2",
+    "typescript": "^5.2.2",
+    "unplugin-vue-components": "^0.26.0",
+    "vite": "^5.0.8",
+    "vue-tsc": "^1.8.25"
+  }
+}
